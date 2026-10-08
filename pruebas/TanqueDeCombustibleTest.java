@@ -81,8 +81,6 @@ class TanqueDeCombustibleTest {
         assertEquals(25.0, tanque.porcentaje(), TOLERANCIA);
     }
 
-    // --- PARTE C: Tus dos pruebas propias con nombres descriptivos ---
-
     @Test
     void porcentajeConTanqueLlenoAlCienPorciento() {
         TanqueDeCombustible tanque = new TanqueDeCombustible(80.0);
@@ -99,20 +97,3 @@ class TanqueDeCombustibleTest {
         assertEquals(20.0, tanque.nivel(), TOLERANCIA);
     }
 }
-```[cite: 10]
-
----
-
-### Archivo 3: `JUSTIFICACION.md` (Parte D)
-Crea este archivo directamente en la **raíz de tu proyecto** (`progra-2/JUSTIFICACION.md`) con este contenido redactado con tus propias palabras para asegurar los 10 puntos de explicación[cite: 10]:
-
-```markdown
-Los campos capacidad y nivel son privados para encapsular el estado interno de la clase TanqueDeCombustible, impidiendo que clases externas los modifiquen de forma directa o indebida. Esto protege el invariante fundamental de que el nivel nunca puede ser negativo ni superar la capacidad máxima, garantizando que cualquier cambio de estado pase obligatoriamente por los métodos validados del objeto.
-```[cite: 10]
-
----
-
-### ¿Cómo verificar que todo funciona a la perfección?
-Una vez que tengas creados estos tres archivos y el `pom.xml` del profesor en la raíz, ejecuta en tu terminal de VS Code:
-```bash
-mvn clean test
